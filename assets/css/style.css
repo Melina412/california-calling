@@ -4,4 +4,91 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: Inter;
+  src: url("../fonts/Inter/Inter-VariableFont_slnt_wght.ttf");
+}
+@font-face {
+  font-family: WorkSans;
+  src: url("../fonts/Work_Sans/WorkSans-VariableFont_wght.ttf");
+}
+html {
+  font-size: 62.5%;
+}
+
+.button_style, header aside button {
+  width: 11.5rem;
+  height: 5rem;
+  font-size: 2rem;
+  font-family: WorkSans;
+  font-weight: 400;
+  line-height: 110%;
+  letter-spacing: -0.4px;
+  color: #fff;
+  background-color: #000;
+  border: 0.1rem solid #aaa;
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+}
+header .vertical-line {
+  width: 50vw;
+  height: 15rem;
+  border-right: 0.1rem solid rgba(255, 255, 255, 0.3);
+}
+header .header-title {
+  width: 30%;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 26rem auto;
+}
+header .header-title p:nth-child(1) {
+  font-size: 1.2rem;
+  font-family: Worksans;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.5px;
+  padding: 1.7rem 0;
+}
+header .header-title p:nth-child(2) {
+  font-size: 6.4rem;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 80%;
+  letter-spacing: normal;
+}
+header .header-title p:nth-child(3) {
+  font-size: 6.4rem;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 80%;
+  letter-spacing: normal;
+  color: #000;
+  text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}
+header .header-title p:nth-child(4) {
+  font-size: 1.2rem;
+  font-family: Worksans;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.5px;
+  padding: 1.2rem 0;
+}
+header aside {
+  width: 90%;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 4rem auto;
+}
+main .story {
+  background-color: #000;
+  color: #fff;
+}
+
 /*# sourceMappingURL=style.css.map */

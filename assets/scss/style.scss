@@ -3,3 +3,109 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: Inter;
+  src: url("../fonts/Inter/Inter-VariableFont_slnt_wght.ttf");
+}
+
+@font-face {
+  font-family: WorkSans;
+  src: url("../fonts/Work_Sans/WorkSans-VariableFont_wght.ttf");
+}
+
+html {
+  font-size: 62.5%;
+}
+
+// ---------- mixins ----------
+
+@mixin text-style($fs, $ff, $fw, $lh, $ls) {
+  font-size: $fs;
+  font-family: $ff;
+  font-weight: $fw;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+
+@mixin element-size($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+// ---------- variables ----------
+
+$bgc: #000;
+$tc: #fff;
+
+// ---------- global classes ----------
+
+.button_style {
+  @include element-size(11.5rem, 5rem);
+  @include text-style(2rem, WorkSans, 400, 110%, -0.4px);
+  color: $tc;
+  background-color: $bgc;
+  border: 0.1rem solid #aaa;
+}
+
+// * ---------- header ----------
+
+header {
+  background-color: $bgc;
+  color: $tc;
+
+  .vertical-line {
+    @include element-size(50vw, 15rem);
+    border-right: 0.1rem solid rgba(255, 255, 255, 0.3);
+  }
+
+  .header-title {
+    @include element-size(30%, 25rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 26rem auto;
+
+    p {
+      &:nth-child(1) {
+        @include text-style(1.2rem, Worksans, 400, normal, -0.5px);
+        padding: 1.7rem 0;
+      }
+
+      &:nth-child(2) {
+        @include text-style(6.4rem, Inter, 700, 80%, normal);
+      }
+
+      &:nth-child(3) {
+        @include text-style(6.4rem, Inter, 700, 80%, normal);
+        color: #000;
+        text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff,
+          -1px 1px 0 #fff;
+      }
+
+      &:nth-child(4) {
+        @include text-style(1.2rem, Worksans, 400, normal, -0.5px);
+        padding: 1.2rem 0;
+      }
+    }
+  }
+
+  aside {
+    @include element-size(90%, 5rem);
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 4rem auto;
+
+    button {
+      @extend .button_style;
+    }
+  }
+}
+
+main {
+  .story {
+    background-color: $bgc;
+    color: $tc;
+  }
+}
