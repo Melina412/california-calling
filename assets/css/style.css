@@ -27,11 +27,18 @@ html {
   color: #fff;
   background-color: #000;
   border: 0.1rem solid #aaa;
+  cursor: pointer;
+}
+.button_style:hover, header aside button:hover {
+  color: #000;
+  background-color: #fff;
+  transition: 0.5s;
 }
 
 header {
   background-color: #000;
   color: #fff;
+  padding-bottom: 4rem;
 }
 header .vertical-line {
   width: 50vw;
@@ -84,11 +91,52 @@ header aside {
   height: 5rem;
   display: flex;
   justify-content: space-between;
-  margin: 0 auto 4rem auto;
+  align-items: center;
+  margin: 0 auto;
 }
+header aside img {
+  width: 4.3rem;
+  height: 2.4rem;
+}
+
 main .story {
   background-color: #000;
   color: #fff;
+  padding: 4rem 0 10rem 0;
+}
+main .story h1 {
+  font-size: 9.5rem;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 110%;
+  letter-spacing: -2.5px;
+  width: 80%;
+  height: 65rem;
+  margin: 12rem 10% 0 5%;
+}
+main .story .story-stats-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 5%;
+}
+main .story .story-stats-wrapper div .stats {
+  font-size: 1.4rem;
+  font-family: WorkSans;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: normal;
+}
+main .story .story-stats-wrapper div .numbers {
+  font-size: 9.3rem;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 115%;
+  letter-spacing: -2.5px;
+}
+main .story .story-stats-wrapper img {
+  width: auto;
+  height: 54rem;
 }
 
 /*# sourceMappingURL=style.css.map */

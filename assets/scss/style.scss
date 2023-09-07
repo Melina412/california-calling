@@ -46,13 +46,21 @@ $tc: #fff;
   color: $tc;
   background-color: $bgc;
   border: 0.1rem solid #aaa;
+  cursor: pointer;
+
+  &:hover {
+    color: $bgc;
+    background-color: $tc;
+    transition: 0.5s;
+  }
 }
 
-// * ---------- header ----------
+// * -------------------- header --------------------
 
 header {
   background-color: $bgc;
   color: $tc;
+  padding-bottom: 4rem;
 
   .vertical-line {
     @include element-size(50vw, 15rem);
@@ -95,17 +103,55 @@ header {
     @include element-size(90%, 5rem);
     display: flex;
     justify-content: space-between;
-    margin: 0 auto 4rem auto;
+    align-items: center;
+    margin: 0 auto;
 
     button {
       @extend .button_style;
+    }
+
+    img {
+      @include element-size(4.3rem, 2.4rem);
     }
   }
 }
 
 main {
+  // * -------------------- story section --------------------
   .story {
     background-color: $bgc;
     color: $tc;
+    padding: 4rem 0 10rem 0;
+
+    h1 {
+      @include text-style(9.5rem, Inter, 700, 110%, -2.5px);
+      @include element-size(80%, 65rem);
+      margin: 12rem 10% 0 5%;
+    }
+
+    .story-stats-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: 5%;
+
+      div {
+        .stats {
+          @include text-style(1.4rem, WorkSans, 400, normal, normal);
+        }
+
+        .numbers {
+          @include text-style(9.3rem, Inter, 700, 115%, -2.5px);
+        }
+      }
+
+      img {
+        @include element-size(auto, 54rem);
+      }
+    }
+  }
+
+  // * -------------------- story section --------------------
+  .action {
   }
 }
