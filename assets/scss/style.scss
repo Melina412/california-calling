@@ -267,6 +267,7 @@ main {
     .goldenbear-images {
       img {
         position: absolute;
+
         &:first-child {
           @include element-size(55vw, auto);
           bottom: -10%;
@@ -298,9 +299,59 @@ main {
 
   // * -------------------- poppy bear section --------------------
   .poppybear {
+    height: 100vw;
     background-color: #eee;
-    img {
-      width: 50%;
+    position: relative;
+
+    .poppybear-text {
+      display: flex;
+      flex-direction: column;
+      margin: 0 10%;
+
+      .poppybear-text-flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .number {
+        @include text-style(2rem, WorkSans, 400, 150%, -0.4px);
+        padding: 1.5rem 0;
+      }
+
+      h2 {
+        @include text-style(8.5rem, Inter, 700, 98%, normal);
+        width: 30vw;
+      }
+
+      .quote {
+        @include text-style(2.9rem, Inter, 700, 115%, -0.4px);
+        width: 40vw;
+      }
+
+      .artist {
+        @include text-style(1.8rem, WorkSans, 400, 160%, -0.4px);
+        padding: 2.5rem 0;
+      }
+    }
+
+    .poppybear-images {
+      img {
+        position: absolute;
+
+        &:first-child {
+          @include element-size(29vw, auto);
+          bottom: 9%;
+          left: 10vw;
+          z-index: 2;
+        }
+
+        &:nth-child(2) {
+          @include element-size(55vw, auto);
+          bottom: 3%;
+          left: 36vw;
+        }
+      }
     }
   }
 }

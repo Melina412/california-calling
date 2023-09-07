@@ -292,10 +292,67 @@ main .goldenbear-below img {
   z-index: -1;
 }
 main .poppybear {
+  height: 100vw;
   background-color: #eee;
+  position: relative;
 }
-main .poppybear img {
-  width: 50%;
+main .poppybear .poppybear-text {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10%;
+}
+main .poppybear .poppybear-text .poppybear-text-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .poppybear .poppybear-text .number {
+  font-size: 2rem;
+  font-family: WorkSans;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.4px;
+  padding: 1.5rem 0;
+}
+main .poppybear .poppybear-text h2 {
+  font-size: 8.5rem;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 98%;
+  letter-spacing: normal;
+  width: 30vw;
+}
+main .poppybear .poppybear-text .quote {
+  font-size: 2.9rem;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 115%;
+  letter-spacing: -0.4px;
+  width: 40vw;
+}
+main .poppybear .poppybear-text .artist {
+  font-size: 1.8rem;
+  font-family: WorkSans;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: -0.4px;
+  padding: 2.5rem 0;
+}
+main .poppybear .poppybear-images img {
+  position: absolute;
+}
+main .poppybear .poppybear-images img:first-child {
+  width: 29vw;
+  height: auto;
+  bottom: 9%;
+  left: 10vw;
+  z-index: 2;
+}
+main .poppybear .poppybear-images img:nth-child(2) {
+  width: 55vw;
+  height: auto;
+  bottom: 3%;
+  left: 36vw;
 }
 
 /*# sourceMappingURL=style.css.map */
