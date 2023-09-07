@@ -16,7 +16,7 @@ html {
   font-size: 62.5%;
 }
 
-.button_style, header aside button {
+.button_style, footer .footer-text a, header aside a {
   width: 11.5rem;
   height: 5rem;
   font-size: 2rem;
@@ -24,12 +24,15 @@ html {
   font-weight: 400;
   line-height: 110%;
   letter-spacing: -0.4px;
-  color: #fff;
+  display: block;
+  padding: 1.4rem 3.2rem;
   background-color: #000;
   border: 0.1rem solid #aaa;
+  text-decoration: none;
+  color: #fff;
   cursor: pointer;
 }
-.button_style:hover, header aside button:hover {
+.button_style:hover, footer .footer-text a:hover, header aside a:hover {
   color: #000;
   background-color: #fff;
   transition: 0.5s;
@@ -353,6 +356,50 @@ main .poppybear .poppybear-images img:nth-child(2) {
   height: auto;
   bottom: 3%;
   left: 36vw;
+}
+
+footer {
+  height: 50vw;
+  background-color: #000;
+  color: #fff;
+  position: relative;
+  padding-top: 10vw;
+}
+footer .footer-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: 40vw;
+  margin: 0 10% 10% 10%;
+}
+footer .footer-text p:first-child {
+  font-size: 1.2rem;
+  font-family: WorkSans;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: normal;
+}
+footer .footer-text p:nth-child(2) {
+  font-size: 2.4rem;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 192%;
+  letter-spacing: normal;
+}
+footer aside {
+  width: 90vw;
+  height: 8.2rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+footer aside .footer-left .sns img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+footer aside figure img {
+  width: 5rem;
+  height: auto;
 }
 
 /*# sourceMappingURL=style.css.map */

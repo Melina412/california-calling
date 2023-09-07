@@ -43,9 +43,12 @@ $tc: #fff;
 .button_style {
   @include element-size(11.5rem, 5rem);
   @include text-style(2rem, WorkSans, 400, 110%, -0.4px);
-  color: $tc;
+  display: block;
+  padding: 1.4rem 3.2rem;
   background-color: $bgc;
   border: 0.1rem solid #aaa;
+  text-decoration: none;
+  color: $tc;
   cursor: pointer;
 
   &:hover {
@@ -106,7 +109,7 @@ header {
     align-items: center;
     margin: 0 auto;
 
-    button {
+    a {
       @extend .button_style;
     }
 
@@ -355,3 +358,60 @@ main {
     }
   }
 }
+
+// * -------------------- footer style --------------------
+footer {
+  height: 50vw;
+  background-color: $bgc;
+  color: $tc;
+  position: relative;
+  padding-top: 10vw;
+
+  .footer-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    width: 40vw;
+    margin: 0 10% 10% 10%;
+    p {
+      &:first-child {
+        @include text-style(1.2rem, WorkSans, 400, normal, normal);
+      }
+
+      &:nth-child(2) {
+        @include text-style(2.4rem, Inter, 700, 192%, normal);
+      }
+    }
+
+    a {
+      @extend .button_style;
+    }
+  }
+
+  aside {
+    @include element-size(90vw, 8.2rem);
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    .footer-left {
+      .sns {
+        img {
+          @include element-size(1.5rem, 1.5rem);
+        }
+      }
+    }
+
+    figure {
+      img {
+        @include element-size(5rem, auto);
+      }
+    }
+  }
+}
+
+// * es fehlt noch:
+
+// * - animationen
+// * - tablet/mobile version
+// * - footer finaler style
