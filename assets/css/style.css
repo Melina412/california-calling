@@ -141,6 +141,7 @@ main .story .story-stats-wrapper img {
 main .action {
   height: 140vw;
   position: relative;
+  padding-top: 25vw;
 }
 main .action .action-text {
   width: 35%;
@@ -149,6 +150,7 @@ main .action .action-text {
   flex-direction: column;
   justify-content: space-between;
   margin: 0 auto;
+  gap: 53vw;
 }
 main .action .action-text div h2 {
   font-size: 8.4rem;
@@ -171,30 +173,44 @@ main .action .action-images img {
 main .action .action-images img:nth-child(1) {
   width: 32.9rem;
   height: 21.9rem;
+  top: -4%;
+  right: 10vw;
 }
 main .action .action-images img:nth-child(2) {
   width: 27.4rem;
   height: 18.3rem;
+  top: 15%;
+  left: 5vw;
 }
 main .action .action-images img:nth-child(3) {
   width: 27.4rem;
   height: 18.3rem;
+  top: 32%;
+  right: 0;
 }
 main .action .action-images img:nth-child(4) {
   width: 32.9rem;
   height: 21.9rem;
+  top: 43%;
+  left: 15vw;
 }
 main .action .action-images img:nth-child(5) {
   width: 32.9rem;
   height: 21.9rem;
+  top: 54%;
+  right: 15vw;
 }
 main .action .action-images img:nth-child(6) {
   width: 27.4rem;
   height: 18.3rem;
+  top: 70%;
+  left: 0;
 }
 main .action .action-images img:nth-child(7) {
   width: 43.9rem;
   height: 29.3rem;
+  bottom: -4%;
+  right: 15vw;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -155,12 +155,14 @@ main {
   .action {
     height: 140vw;
     position: relative;
+    padding-top: 25vw;
     .action-text {
       @include element-size(35%, 100rem);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       margin: 0 auto;
+      gap: 53vw;
       div {
         h2 {
           @include text-style(8.4rem, Inter, 700, 98%, -1.3px);
@@ -178,30 +180,44 @@ main {
 
         &:nth-child(1) {
           @include element-size(32.9rem, 21.9rem);
+          top: -4%;
+          right: 10vw;
         }
 
         &:nth-child(2) {
           @include element-size(27.4rem, 18.3rem);
+          top: 15%;
+          left: 5vw;
         }
 
         &:nth-child(3) {
           @include element-size(27.4rem, 18.3rem);
+          top: 32%;
+          right: 0;
         }
 
         &:nth-child(4) {
           @include element-size(32.9rem, 21.9rem);
+          top: 43%;
+          left: 15vw;
         }
 
         &:nth-child(5) {
           @include element-size(32.9rem, 21.9rem);
+          top: 54%;
+          right: 15vw;
         }
 
         &:nth-child(6) {
           @include element-size(27.4rem, 18.3rem);
+          top: 70%;
+          left: 0;
         }
 
         &:nth-child(7) {
           @include element-size(43.9rem, 29.3rem);
+          bottom: -4%;
+          right: 15vw;
         }
       }
     }
