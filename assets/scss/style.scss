@@ -151,7 +151,7 @@ main {
     }
   }
 
-  // * -------------------- story section --------------------
+  // * -------------------- action section --------------------
   .action {
     height: 140vw;
     position: relative;
@@ -218,8 +218,84 @@ main {
           @include element-size(43.9rem, 29.3rem);
           bottom: -4%;
           right: 15vw;
+          z-index: -1;
         }
       }
+    }
+  }
+
+  // * -------------------- golden bear section --------------------
+  .goldenbear {
+    height: 100vw;
+    background-color: $bgc;
+    color: $tc;
+    position: relative;
+    padding-top: 13vw;
+
+    .goldenbear-text {
+      display: flex;
+      flex-direction: column;
+      margin: 0 10%;
+
+      .goldenbear-text-flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .number {
+        @include text-style(2rem, WorkSans, 400, 150%, -0.4px);
+        padding: 1.5rem 0;
+      }
+
+      h2 {
+        @include text-style(8.5rem, Inter, 700, 98%, normal);
+        width: 30vw;
+      }
+
+      .quote {
+        @include text-style(2.9rem, Inter, 700, 115%, -0.4px);
+        width: 40vw;
+      }
+
+      .artist {
+        @include text-style(1.8rem, WorkSans, 400, 160%, -0.4px);
+        padding: 2.5rem 0;
+      }
+    }
+
+    .goldenbear-images {
+      img {
+        position: absolute;
+        &:first-child {
+          @include element-size(55vw, auto);
+          bottom: -10%;
+          left: 10vw;
+        }
+
+        &:nth-child(2) {
+          @include element-size(29vw, auto);
+          bottom: -4%;
+          left: 59vw;
+          z-index: 2;
+        }
+      }
+    }
+  }
+
+  .goldenbear-below {
+    position: relative;
+    img {
+      position: absolute;
+      width: 20%;
+      right: -5vw;
+    }
+  }
+
+  // * -------------------- poppy bear section --------------------
+  .poppybear {
+    img {
+      width: 50%;
     }
   }
 }
