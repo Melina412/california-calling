@@ -284,16 +284,21 @@ main {
   }
 
   .goldenbear-below {
+    height: 25vw;
     position: relative;
+    overflow: hidden;
     img {
+      @include element-size(30vw, auto);
       position: absolute;
-      width: 20%;
-      right: -5vw;
+      top: -10vw;
+      right: -10vw;
+      z-index: -1;
     }
   }
 
   // * -------------------- poppy bear section --------------------
   .poppybear {
+    background-color: #eee;
     img {
       width: 50%;
     }

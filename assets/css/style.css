@@ -279,12 +279,20 @@ main .goldenbear .goldenbear-images img:nth-child(2) {
   z-index: 2;
 }
 main .goldenbear-below {
+  height: 25vw;
   position: relative;
+  overflow: hidden;
 }
 main .goldenbear-below img {
+  width: 30vw;
+  height: auto;
   position: absolute;
-  width: 20%;
-  right: -5vw;
+  top: -10vw;
+  right: -10vw;
+  z-index: -1;
+}
+main .poppybear {
+  background-color: #eee;
 }
 main .poppybear img {
   width: 50%;
