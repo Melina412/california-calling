@@ -153,5 +153,57 @@ main {
 
   // * -------------------- story section --------------------
   .action {
+    height: 140vw;
+    position: relative;
+    .action-text {
+      @include element-size(35%, 100rem);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 0 auto;
+      div {
+        h2 {
+          @include text-style(8.4rem, Inter, 700, 98%, -1.3px);
+        }
+      }
+      p {
+        @include text-style(1.6rem, WorkSans, 400, 180%, -0.4px);
+        width: 90%;
+      }
+    }
+
+    .action-images {
+      img {
+        position: absolute;
+
+        &:nth-child(1) {
+          @include element-size(32.9rem, 21.9rem);
+        }
+
+        &:nth-child(2) {
+          @include element-size(27.4rem, 18.3rem);
+        }
+
+        &:nth-child(3) {
+          @include element-size(27.4rem, 18.3rem);
+        }
+
+        &:nth-child(4) {
+          @include element-size(32.9rem, 21.9rem);
+        }
+
+        &:nth-child(5) {
+          @include element-size(32.9rem, 21.9rem);
+        }
+
+        &:nth-child(6) {
+          @include element-size(27.4rem, 18.3rem);
+        }
+
+        &:nth-child(7) {
+          @include element-size(43.9rem, 29.3rem);
+        }
+      }
+    }
   }
 }
