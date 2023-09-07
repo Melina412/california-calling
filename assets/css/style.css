@@ -30,7 +30,6 @@ html {
   border: 0.1rem solid #aaa;
   text-decoration: none;
   color: #fff;
-  cursor: pointer;
 }
 .button_style:hover, footer .footer-text a:hover, header aside a:hover {
   color: #000;
@@ -123,6 +122,9 @@ main .story .story-stats-wrapper {
   align-items: center;
   margin-left: 5%;
 }
+main .story .story-stats-wrapper div {
+  padding-top: 8rem;
+}
 main .story .story-stats-wrapper div .stats {
   font-size: 1.4rem;
   font-family: WorkSans;
@@ -136,6 +138,7 @@ main .story .story-stats-wrapper div .numbers {
   font-weight: 700;
   line-height: 115%;
   letter-spacing: -2.5px;
+  padding: 1rem 0 2rem 0;
 }
 main .story .story-stats-wrapper img {
   width: auto;
@@ -286,30 +289,32 @@ main .goldenbear-below {
   position: relative;
   overflow: hidden;
 }
-main .goldenbear-below img {
+main .goldenbear-below .goldenbear-animation {
   width: 30vw;
   height: auto;
   position: absolute;
   top: -10vw;
   right: -10vw;
   z-index: -1;
+  animation: rotation 10s linear infinite;
 }
-main .poppybear {
+
+.poppybear {
   height: 100vw;
   background-color: #eee;
   position: relative;
 }
-main .poppybear .poppybear-text {
+.poppybear .poppybear-text {
   display: flex;
   flex-direction: column;
   margin: 0 10%;
 }
-main .poppybear .poppybear-text .poppybear-text-flex {
+.poppybear .poppybear-text .poppybear-text-flex {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-main .poppybear .poppybear-text .number {
+.poppybear .poppybear-text .number {
   font-size: 2rem;
   font-family: WorkSans;
   font-weight: 400;
@@ -317,7 +322,7 @@ main .poppybear .poppybear-text .number {
   letter-spacing: -0.4px;
   padding: 1.5rem 0;
 }
-main .poppybear .poppybear-text h2 {
+.poppybear .poppybear-text h2 {
   font-size: 8.5rem;
   font-family: Inter;
   font-weight: 700;
@@ -325,7 +330,7 @@ main .poppybear .poppybear-text h2 {
   letter-spacing: normal;
   width: 30vw;
 }
-main .poppybear .poppybear-text .quote {
+.poppybear .poppybear-text .quote {
   font-size: 2.9rem;
   font-family: Inter;
   font-weight: 700;
@@ -333,7 +338,7 @@ main .poppybear .poppybear-text .quote {
   letter-spacing: -0.4px;
   width: 40vw;
 }
-main .poppybear .poppybear-text .artist {
+.poppybear .poppybear-text .artist {
   font-size: 1.8rem;
   font-family: WorkSans;
   font-weight: 400;
@@ -341,28 +346,30 @@ main .poppybear .poppybear-text .artist {
   letter-spacing: -0.4px;
   padding: 2.5rem 0;
 }
-main .poppybear .poppybear-images img {
+.poppybear .poppybear-images img {
   position: absolute;
 }
-main .poppybear .poppybear-images img:first-child {
+.poppybear .poppybear-images img:first-child {
   width: 29vw;
   height: auto;
   bottom: 9%;
   left: 10vw;
   z-index: 2;
 }
-main .poppybear .poppybear-images img:nth-child(2) {
+.poppybear .poppybear-images img:nth-child(2) {
   width: 55vw;
   height: auto;
   bottom: 3%;
   left: 36vw;
+  z-index: 1;
 }
 
 footer {
-  height: 50vw;
+  height: 60vw;
   background-color: #000;
   color: #fff;
   position: relative;
+  overflow: hidden;
   padding-top: 10vw;
 }
 footer .footer-text {
@@ -387,19 +394,87 @@ footer .footer-text p:nth-child(2) {
   letter-spacing: normal;
 }
 footer aside {
-  width: 90vw;
+  width: 80vw;
   height: 8.2rem;
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
+  align-items: center;
+  margin: 0 10vw;
+}
+footer aside .footer-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 1.5rem;
 }
 footer aside .footer-left .sns img {
   width: 1.5rem;
   height: 1.5rem;
 }
+footer aside .footer-left p {
+  font-size: 1.2rem;
+  font-family: WorkSans;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: normal;
+}
 footer aside figure img {
   width: 5rem;
   height: auto;
+}
+footer aside figure img::first-child {
+  width: 5rem;
+  height: 2.8rem;
+}
+footer aside figure img:nth-child(2) {
+  width: 5rem;
+  height: 1.6rem;
+}
+footer .footer-animation {
+  font-size: 9.8rem;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 83%;
+  letter-spacing: normal;
+  width: 200rem;
+  height: 11rem;
+  background-color: #eee;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 52%;
+  right: -66%;
+  z-index: 1;
+  overflow: hidden;
+  white-space: nowrap;
+}
+footer .footer-animation p {
+  color: #000;
+  padding-top: 1rem;
+  animation: banner 8s linear infinite alternate;
+}
+footer .footer-animation p span {
+  color: #eee;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes banner {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

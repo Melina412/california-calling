@@ -18,7 +18,7 @@ html {
   font-size: 62.5%;
 }
 
-// ---------- mixins ----------
+// -------------------- mixins --------------------
 
 @mixin text-style($fs, $ff, $fw, $lh, $ls) {
   font-size: $fs;
@@ -33,12 +33,12 @@ html {
   height: $h;
 }
 
-// ---------- variables ----------
+// -------------------- variables --------------------
 
 $bgc: #000;
 $tc: #fff;
 
-// ---------- global classes ----------
+// -------------------- global classes --------------------
 
 .button_style {
   @include element-size(11.5rem, 5rem);
@@ -49,7 +49,6 @@ $tc: #fff;
   border: 0.1rem solid #aaa;
   text-decoration: none;
   color: $tc;
-  cursor: pointer;
 
   &:hover {
     color: $bgc;
@@ -121,6 +120,7 @@ header {
 
 main {
   // * -------------------- story section --------------------
+
   .story {
     background-color: $bgc;
     color: $tc;
@@ -139,12 +139,15 @@ main {
       margin-left: 5%;
 
       div {
+        padding-top: 8rem;
+
         .stats {
           @include text-style(1.4rem, WorkSans, 400, normal, normal);
         }
 
         .numbers {
           @include text-style(9.3rem, Inter, 700, 115%, -2.5px);
+          padding: 1rem 0 2rem 0;
         }
       }
 
@@ -155,6 +158,7 @@ main {
   }
 
   // * -------------------- action section --------------------
+
   .action {
     height: 140vw;
     position: relative;
@@ -228,6 +232,7 @@ main {
   }
 
   // * -------------------- golden bear section --------------------
+
   .goldenbear {
     height: 100vw;
     background-color: $bgc;
@@ -287,84 +292,92 @@ main {
     }
   }
 
+  // -------------------- animation --------------------
+
   .goldenbear-below {
     height: 25vw;
     position: relative;
     overflow: hidden;
-    img {
+
+    .goldenbear-animation {
       @include element-size(30vw, auto);
       position: absolute;
       top: -10vw;
       right: -10vw;
       z-index: -1;
+      animation: rotation 10s linear infinite;
+    }
+  }
+}
+
+// * -------------------- poppy bear section --------------------
+
+.poppybear {
+  height: 100vw;
+  background-color: #eee;
+  position: relative;
+
+  .poppybear-text {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10%;
+
+    .poppybear-text-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .number {
+      @include text-style(2rem, WorkSans, 400, 150%, -0.4px);
+      padding: 1.5rem 0;
+    }
+
+    h2 {
+      @include text-style(8.5rem, Inter, 700, 98%, normal);
+      width: 30vw;
+    }
+
+    .quote {
+      @include text-style(2.9rem, Inter, 700, 115%, -0.4px);
+      width: 40vw;
+    }
+
+    .artist {
+      @include text-style(1.8rem, WorkSans, 400, 160%, -0.4px);
+      padding: 2.5rem 0;
     }
   }
 
-  // * -------------------- poppy bear section --------------------
-  .poppybear {
-    height: 100vw;
-    background-color: #eee;
-    position: relative;
+  .poppybear-images {
+    img {
+      position: absolute;
 
-    .poppybear-text {
-      display: flex;
-      flex-direction: column;
-      margin: 0 10%;
-
-      .poppybear-text-flex {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+      &:first-child {
+        @include element-size(29vw, auto);
+        bottom: 9%;
+        left: 10vw;
+        z-index: 2;
       }
 
-      .number {
-        @include text-style(2rem, WorkSans, 400, 150%, -0.4px);
-        padding: 1.5rem 0;
-      }
-
-      h2 {
-        @include text-style(8.5rem, Inter, 700, 98%, normal);
-        width: 30vw;
-      }
-
-      .quote {
-        @include text-style(2.9rem, Inter, 700, 115%, -0.4px);
-        width: 40vw;
-      }
-
-      .artist {
-        @include text-style(1.8rem, WorkSans, 400, 160%, -0.4px);
-        padding: 2.5rem 0;
-      }
-    }
-
-    .poppybear-images {
-      img {
-        position: absolute;
-
-        &:first-child {
-          @include element-size(29vw, auto);
-          bottom: 9%;
-          left: 10vw;
-          z-index: 2;
-        }
-
-        &:nth-child(2) {
-          @include element-size(55vw, auto);
-          bottom: 3%;
-          left: 36vw;
-        }
+      &:nth-child(2) {
+        @include element-size(55vw, auto);
+        bottom: 3%;
+        left: 36vw;
+        z-index: 1;
       }
     }
   }
 }
 
 // * -------------------- footer style --------------------
+
 footer {
-  height: 50vw;
+  height: 60vw;
   background-color: $bgc;
   color: $tc;
   position: relative;
+  overflow: hidden;
   padding-top: 10vw;
 
   .footer-text {
@@ -389,29 +402,95 @@ footer {
   }
 
   aside {
-    @include element-size(90vw, 8.2rem);
+    @include element-size(80vw, 8.2rem);
     display: flex;
     justify-content: space-between;
-    margin: 0 auto;
+    align-items: center;
+    margin: 0 10vw;
 
     .footer-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      gap: 1.5rem;
+
       .sns {
         img {
           @include element-size(1.5rem, 1.5rem);
         }
+      }
+
+      p {
+        @include text-style(1.2rem, WorkSans, 400, normal, normal);
       }
     }
 
     figure {
       img {
         @include element-size(5rem, auto);
+
+        &::first-child {
+          @include element-size(5rem, 2.8rem);
+        }
+
+        &:nth-child(2) {
+          @include element-size(5rem, 1.6rem);
+        }
+      }
+    }
+  }
+
+  // -------------------- animation --------------------
+
+  .footer-animation {
+    @include text-style(9.8rem, Inter, 700, 83%, normal);
+    @include element-size(200rem, 11rem);
+    background-color: #eee;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 52%;
+    right: -66%;
+    z-index: 1;
+    overflow: hidden;
+    white-space: nowrap;
+
+    p {
+      color: #000;
+      padding-top: 1rem;
+      animation: banner 8s linear infinite alternate;
+
+      span {
+        color: #eee;
+        text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+          -1px 1px 0 #000;
       }
     }
   }
 }
 
+// -------------------- keyframes --------------------
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes banner {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
 // * es fehlt noch:
 
-// * - animationen
 // * - tablet/mobile version
-// * - footer finaler style
